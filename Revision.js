@@ -1,46 +1,35 @@
-//optonal chaining
-
-const user={
-    firstName:"aniket",
-    // address:{houseNumber:'12545'}
-}
-
-console.log(user.firstName);
-console.log(user?.address?.houseNumber);
-//sets (it is iterable)
-//store data 
-//sets also have its own methods
-//no index-based access
-//order is not garented
-//umique items only (no duplicates are allowed)
-
-const items=['item1','item2','item3'];
-const numbers=new Set();
-numbers.add(1);//add elements to sets
+//sets basics revision for blogs
+const item=["item1","item2","item3"];
+const numbers= new Set();
+numbers.add(1);
 numbers.add(2);
 numbers.add(3);
-numbers.add(items);
-numbers.add(items);
+numbers.add(1);// will not be added 
+numbers.add(item);
 
 console.log(numbers);
 
-/////////example 2
+const myArray=[1,2,3,4,52,1,3,7,78];
+const uniqueElements=new Set(myArray);
+console.log(uniqueElements.has(3));
+console.log(uniqueElements.size);
 
-const myArray=[1,2,3,4,3,5,6,5,6,2];
+// Maps
+const person=new Map();
+person.set('firstname','Aniket');
+person.set("age",7);
+person.set(1,"one");
+console.log(person);
+console.log(typeof(person.keys()));// this claerly indicated that key
+for(let [key,value] of person)
+    {
+     console.log(key," , ",value);
+    }
 
-const uniqueElements= new Set(myArray);
-console.log(uniqueElements);
-//checking for a value in set
-console.log('is value 3 present =',uniqueElements.has(3));
-//for of loop on sets
-for(let elemet of uniqueElements){
-    console.log(elemet);
+const personDetails={
+    id:1,
+    firstname:"Aniket"
 }
-///finding length of sets
-console.log(uniqueElements.length);// does not work on sets o/p undefined
-let length=0;
-for(let elementValue of uniqueElements){
-    length++;
-}
-console.log('length of uniquelements is ',length);
-console.log(uniqueElements.size);// method for checking size of set
+const extraInfo=new Map();
+extraInfo.set(personDetails,{age:24,gener:"male"});
+console.log(extraInfo.get(personDetails).age);
