@@ -1,35 +1,41 @@
-//sets basics revision for blogs
-const item=["item1","item2","item3"];
-const numbers= new Set();
-numbers.add(1);
-numbers.add(2);
-numbers.add(3);
-numbers.add(1);// will not be added 
-numbers.add(item);
-
-console.log(numbers);
-
-const myArray=[1,2,3,4,52,1,3,7,78];
-const uniqueElements=new Set(myArray);
-console.log(uniqueElements.has(3));
-console.log(uniqueElements.size);
-
-// Maps
-const person=new Map();
-person.set('firstname','Aniket');
-person.set("age",7);
-person.set(1,"one");
-console.log(person);
-console.log(typeof(person.keys()));// this claerly indicated that key
-for(let [key,value] of person)
-    {
-     console.log(key," , ",value);
+const userMethods={
+    about(){
+        return `${this.firstName} is ${this.age} yrs old`;
+    },
+    is18(){
+        return this.age>=18;
+    },
+    maiyaha(){
+        return "hai yaha huuuuu";
     }
-
-const personDetails={
-    id:1,
-    firstname:"Aniket"
 }
-const extraInfo=new Map();
-extraInfo.set(personDetails,{age:24,gener:"male"});
-console.log(extraInfo.get(personDetails).age);
+function createUser(firstName,lastName,email,phone,age,address){
+    const user=Object.create(userMethods);
+    user.firstName=firstName;
+    user.lastName=lastName;
+    user.email=email;
+    user.phone=phone;
+    user.age=age;
+    user.address=address;
+    // user.about=userMethods.about;
+    // user.is18=userMethods.is18;
+    return user;
+}
+
+const user1=createUser("Aniket","Mogare","aniket@gmail.com",866224564,24,"my address");
+const user2=createUser("Shubham","yeole","shubham@gmail.com",8895745544,15,"my address 2");
+
+console.log(user2.maiyaha());
+
+
+//checking is the object1 is proto of obj2 
+const obj1={
+    key1:"value1",
+    key2:"value2",
+}
+const obj2=Object.create(obj1);
+obj2.key3="value3";
+
+console.log(obj2.__proto__);// prints on my pc [[prototype]] can also print __proto__
+
+console.log(user1);
