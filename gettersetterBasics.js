@@ -19,4 +19,4 @@ class Person{
 const Person1=new Person("aniket","mogare",24);
 Person1.fullName="Shubham Yeole";
 console.log(Person1.fullName);
-console.log(fullName)
+
