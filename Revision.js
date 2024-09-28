@@ -1,13 +1,8 @@
-console.log(this);
-console.log(window);
-console.log(myFunction);
-console.log(fullName);
+const lastName="Mogare";
 
-function myFunction(){
-    console.log("this is my function");
+const printName=function(){
+    const firstname="Aniket";
+    console.log(firstName);
+    console.log(lastName);
 }
-
-var firstName="Aniket";
-var lastName="Mogare";
-var fullName=firstName +" "+ lastName;
-console.log(fullName);
+printName();
