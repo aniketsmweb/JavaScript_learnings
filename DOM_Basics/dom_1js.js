@@ -35,7 +35,7 @@ const mainHeading=document.querySelector("div.headline h2");
 // // console.log(headline.innerHTML);
 // headline.innerHTML="<h1>Inner HTML cnanged</h1>";
 // headline.innerHTML+="<button class=\"btn\" >Learn More</button>";
-const  sectionTodo=document.querySelector(".section-todo");
+// const  sectionTodo=document.querySelector(".section-todo");
 // console.log(sectionTodo.classList);
 // sectionTodo.classList.add("bg-dark"); /// adds a class to classList
 // sectionTodo.classList.remove("bg-dark"); // removes a class from classList
@@ -49,16 +49,47 @@ const  sectionTodo=document.querySelector(".section-todo");
 // console.log(header.classList);
 // header.classList.add("bg-dark");             //learn specificity IN CSS
 // header.classList.toggle("bg-dark");
-
+//==================================================================
 //document.createElement()
 //append
 //prepend
 //remove
 
-const newTodoItem=document.createElement("li");
-const newTodoItemText=document.createTextNode("Write a blog");
-const todoList=document.querySelector(".todo-list");
-newTodoItem.append(newTodoItemText);
-todoList.append(newTodoItem);
+// const newTodoItem=document.createElement("li");
+// const newTodoItemText=document.createTextNode("Write a blog");
+// const todoList=document.querySelector(".todo-list");
+// newTodoItem.append(newTodoItemText);
+// todoList.append(newTodoItem);
+//==================================================================
+//before
+//after
+
+// const newTodoItem = document.createElement("li");
+// newTodoItem.textContent=("write a blog");
+// const todoList=document.querySelector(".todo-list");
+// todoList.after(newTodoItem);
+//==================================================================
+//static lits vs live list
+//querySelectorAll gives us static list
+//getElementsBySomething (eg:getElementsByClassName) gives us live list
+
+// const ul=document.querySelector(".todo-list");
+// const listItems=ul.getElementsByTagName("li");
+
+// const sixthList=document.createElement("li");
+// sixthList.textContent="item 6";
+
+// ul.append(sixthList);
+// console.log(listItems);  // this returns live(dynamic) HTMl collection;
+
+// //how to get dimention of an element
+// //height width
+// const sectionTodo=document.querySelector(".section-todo");
+// const info=sectionTodo.getBoundingClientRect();
+// console.log(info);
+
+
+
+
 
 
