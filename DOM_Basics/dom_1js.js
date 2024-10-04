@@ -84,9 +84,9 @@ const mainHeading=document.querySelector("div.headline h2");
 
 // //how to get dimention of an element
 // //height width
-// const sectionTodo=document.querySelector(".section-todo");
-// const info=sectionTodo.getBoundingClientRect();
-// console.log(info);
+const sectionTodo=document.querySelector(".section-todo");
+ const info=sectionTodo.getBoundingClientRect();
+ console.log(info);
 
 
 
