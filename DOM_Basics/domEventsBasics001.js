@@ -8,7 +8,7 @@ const btn=document.querySelector(".btn-headline");
 // }
 // 2)by using attribute in tag
 //3)EventListner
-btn.addEventListener("click",function (){
+btn.addEventListener("click", ()=>{
     console.log("you clicked me !!!!!!!!!");
-    console.log(this);
+    console.dir(this);
 });
