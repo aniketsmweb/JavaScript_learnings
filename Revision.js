@@ -10,5 +10,4 @@ const user2={
     age:26,
 }
 
-const myfunc=user1.about.bind(user2);
-myfunc();
+
