@@ -5,8 +5,5 @@ const user1={
         console.log(this.firstName,this.age);
     }
 }
-const user2={
-    firstName:"Shubham",
-    age:26,
-}
+
 
